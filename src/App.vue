@@ -1,9 +1,9 @@
 <template>
   <div class="app">
     <HelloWorld :msg="'Welcome to Your Vue.JS App'"/>
-    <Menu :unreadMessages="5"/>
-    <Message :message="message"/>
     <Messages/>
+    <Message :message="message"/>
+    <Menu :unreadMessages="5"/>
   </div>
 </template>
 
@@ -29,6 +29,7 @@ html, body {
   height: 100%;
 }
 #app {
+  border-radius: 8px;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

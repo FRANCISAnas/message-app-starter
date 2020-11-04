@@ -1,6 +1,7 @@
 <template>
-  <Message v-for="curMessage in messages" :key="curMessage.id" :message="curMessage"/>
-
+  <div>
+    <Message v-for="curMessage in messages" :key="curMessage.id" :message="curMessage"/>
+  </div>
 </template>
 
 <script>
@@ -21,5 +22,10 @@ export default {
 </script>
 
 <style scoped>
-
+div{
+  border-radius: 5px;
+  border-color: mediumvioletred;
+  border-width: 5px;
+  border-collapse: collapse;
+}
 </style>

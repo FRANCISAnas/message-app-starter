@@ -30,7 +30,7 @@ export const messagesMock = [
         date: "Sun Oct 11 2020 14:09:25 GMT+0200 (Central European Summer Time)",
     },
     {
-        id: "5",
+        id: "4",
         sender: {
             name: "Art Fritz",
             profileImage: "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&h=100&w=100" 
