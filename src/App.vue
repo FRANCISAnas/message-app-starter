@@ -1,6 +1,9 @@
 <template>
   <div class="app">
     <HelloWorld :msg="'Welcome to Your Vue.JS App'"/>
+    <Menu :unreadMessages="5"/>
+    <Message :message="message"/>
+    <Messages/>
   </div>
 </template>
 
@@ -14,9 +17,9 @@ export default {
   name: "App",
   components: {
     HelloWorld,
-    Menu,
     Messages,
-    Message
+    Message,
+    Menu
   }
 };
 </script> 
