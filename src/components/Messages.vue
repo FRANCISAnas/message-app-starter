@@ -1,9 +1,8 @@
 <template>
-  <div>
+  <h4>
     <Message v-for="curMessage in messages" :key="curMessage.id" :message="curMessage"/>
-  </div>
+  </h4>
 </template>
-
 <script>
 import {messagesMock} from "@/mocks/messages.mock";
 import Message from "@/components/Message";
@@ -22,10 +21,9 @@ export default {
 </script>
 
 <style scoped>
-div{
-  border-radius: 5px;
-  border-color: mediumvioletred;
-  border-width: 5px;
-  border-collapse: collapse;
+h4{
+  border-style: groove;
+  border-color: #c7155c;
+  border-width: 7px;
 }
 </style>

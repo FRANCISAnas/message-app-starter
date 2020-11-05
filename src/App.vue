@@ -1,7 +1,7 @@
 <template>
   <div class="app">
     <HelloWorld :msg="'Welcome to Your Vue.JS App'"/>
-    <Messages/>
+    <h2><Messages/></h2>
     <Message :message="message"/>
     <Menu :unreadMessages="5"/>
   </div>
