@@ -1,11 +1,10 @@
 <template>
-
     <div v-if="this.message !==undefined">
-      <button @click="changeStatus()">
+      <button @click="emitMessage(this.message)">
         <img v-bind:src="message.sender.profileImage"/>
-        <strong v-if="hasRead()"><p>name: {{message.sender.name}}</p></strong>
-        <p>message: {{message.content}}</p>
-        <p>message: {{message.read}}</p>
+        <p>name: {{message.sender.name}}</p>
+        <strong v-if="hasRead()"><p>message: {{message.content}}</p></strong>
+        <p v-else>message: {{message.content}}</p>
       </button>
     </div>
 </template>
@@ -21,10 +20,8 @@ name: "Message",
       return  ! this.message.read;
     },
 
-    changeStatus(){
-      console.log("this.message.read = ",this.message.read);
-      this.message.read = true;
-      // reload page
+    emitMessage(message){
+      this.$emit("message", message);
     }
   }
 }

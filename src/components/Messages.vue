@@ -1,8 +1,9 @@
 <template>
   <h4>
-    <Message v-for="curMessage in messages" :key="curMessage.id" :message="curMessage"/>
+    <Message v-for="curMessage in messages" :key="curMessage.id" :message="curMessage" @message="updateStatus"/>
   </h4>
 </template>
+
 <script>
 import {messagesMock} from "@/mocks/messages.mock";
 import Message from "@/components/Message";
@@ -17,6 +18,15 @@ export default {
 
   name: "Messages",
 
+  methods:{
+    updateStatus(message){
+      this.messages.forEach((value) => {
+      if(value === message){
+       message.read = true;
+      }
+    });
+    }
+  }
 }
 </script>
 
