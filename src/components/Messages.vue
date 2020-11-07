@@ -36,7 +36,6 @@ export default {
      */
     sortMyMessagesByDate(){
       for (let i = 0; i < this.messages.length; i++){
-        console.log("sorting ...");
         for (let j = i; i < this.messages.length; i++){
           if(this.dateParser(this.messages[j].date)<this.dateParser(this.messages[i].date)
           ||
@@ -44,7 +43,6 @@ export default {
             let temp = this.messages[i];
             this.messages[i] = this.messages[j];
             this.messages[j] = temp;
-            console.log("here we go ...");
           }
         }
       }
@@ -88,7 +86,6 @@ export default {
     hourParser(date) {
       let hour = date.toString().substring(16,24);
       let to_ret = parseInt(hour.substring(0,2)) + parseInt(hour.substring(3,5)) + parseInt(hour.substring(6,8));
-      console.log(to_ret);
       return to_ret;
     }
   }
