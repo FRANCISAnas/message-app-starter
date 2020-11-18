@@ -2,9 +2,9 @@
   <div class="app">
     <HelloWorld :msg="'Welcome to Your Vue.JS App'"/>
     <h2>
-      <Messages @unread="recuperate($event)"/>
+      <Messages/>
     </h2>
-    <Menu :unreadMessages="this.unreadMessages"/>
+    <Menu/>
   </div>
 </template>
 
@@ -19,17 +19,6 @@ export default {
     HelloWorld,
     Messages,
     Menu
-  },
-  data() {
-    return {
-      unreadMessages: 0
-    };
-  },
-  methods:{
-    recuperate(toRet){
-      console.log("toRet = ",toRet);
-      this.unreadMessages = toRet;
-    }
   }
 };
 </script>
