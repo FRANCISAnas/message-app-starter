@@ -2,7 +2,7 @@
   <div class="app">
     <HelloWorld :msg="'Welcome to Your Vue.JS App'"/>
     <h2>
-      <Messages @toRet="recuperate()"/>
+      <Messages @unread="recuperate($event)"/>
     </h2>
     <Menu :unreadMessages="this.unreadMessages"/>
   </div>

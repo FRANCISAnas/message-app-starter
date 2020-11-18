@@ -90,15 +90,15 @@ export default {
       return to_ret;
     },
     updateUnreadMsg() {
-      let toRet = 0;
+      let unread = 0;
       this.messages.forEach(value => {
 
         if(!value.read){
           console.log("value.id",value.id);
-          toRet++;
+          unread++;
         }
       });
-      this.$emit("unread", toRet);
+      this.$emit("unread", unread);
     }
   }
 }

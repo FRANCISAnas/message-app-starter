@@ -1,7 +1,8 @@
 <template>
   <div class="Menu">
     <i class="fas fa-user-friends"></i>
-    <i class="fas fa-comment-alt">{{ unreadMessages }}</i>
+    <i v-if="this.unreadMessages>0" class="fas fa-comment-alt">{{ unreadMessages }}</i>
+    <i v-else class="far fa-comment-alt"></i>
     <i class="fas fa-phone"></i>
     <i class="fas fa-ellipsis-h"></i>
 
@@ -15,11 +16,6 @@ export default {
     unreadMessages: Number,
   },
 
-  methods: {
-    getNumber(){
-
-    }
-  }
 }
 </script>
 
