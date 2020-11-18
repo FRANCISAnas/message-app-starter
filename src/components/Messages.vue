@@ -29,6 +29,7 @@ export default {
          message.read = true;
         }
       });
+      this.updateUnreadMsg();
     },
 
     /**
@@ -87,6 +88,17 @@ export default {
       let hour = date.toString().substring(16,24);
       let to_ret = parseInt(hour.substring(0,2)) + parseInt(hour.substring(3,5)) + parseInt(hour.substring(6,8));
       return to_ret;
+    },
+    updateUnreadMsg() {
+      let toRet = 0;
+      this.messages.forEach(value => {
+
+        if(!value.read){
+          console.log("value.id",value.id);
+          toRet++;
+        }
+      });
+      this.$emit("unread", toRet);
     }
   }
 }

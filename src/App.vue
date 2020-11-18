@@ -1,9 +1,10 @@
 <template>
   <div class="app">
     <HelloWorld :msg="'Welcome to Your Vue.JS App'"/>
-    <h2><Messages/></h2>
-    <Message :message="message"/>
-    <Menu :unreadMessages="5"/>
+    <h2>
+      <Messages @toRet="recuperate()"/>
+    </h2>
+    <Menu :unreadMessages="this.unreadMessages"/>
   </div>
 </template>
 
@@ -11,23 +12,33 @@
 import HelloWorld from "./components/HelloWorld.vue";
 import Menu from "./components/Menu.vue";
 import Messages from "./components/Messages.vue";
-import Message from "./components/Message.vue";
 
 export default {
   name: "App",
   components: {
     HelloWorld,
     Messages,
-    Message,
     Menu
+  },
+  data() {
+    return {
+      unreadMessages: 0
+    };
+  },
+  methods:{
+    recuperate(toRet){
+      console.log("toRet = ",toRet);
+      this.unreadMessages = toRet;
+    }
   }
 };
-</script> 
+</script>
 
 <style>
 html, body {
   height: 100%;
 }
+
 #app {
   border-radius: 8px;
   font-family: Avenir, Helvetica, Arial, sans-serif;
