@@ -1,9 +1,20 @@
 <template>
   <div class="Menu">
-    <i class="fas fa-user-friends"></i>
-    <i v-if="nbUnReadMsg>0" class="fas fa-comment-alt">{{ nbUnReadMsg }}</i>
-    <i v-else class="far fa-comment-alt"></i>
-    <i class="fas fa-phone"></i>
+
+    <router-link to="/contacts">
+      <i class="fas fa-user-friends"></i>
+    </router-link>
+
+    <router-link to="/messages">
+      <i v-if="nbUnReadMsg>0" class="fas fa-comment-alt">
+        {{ nbUnReadMsg }}
+      </i>
+      <i v-else class="far fa-comment-alt"></i>
+    </router-link>
+
+    <router-link to="/contacts">
+      <i class="fas fa-phone"></i>
+    </router-link>
     <i class="fas fa-ellipsis-h"></i>
 
   </div>

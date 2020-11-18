@@ -17,6 +17,9 @@ export default {
       return this.$store.getters.sortMessagesByDate;
     }
   },
+  created() {
+    this.$store.dispatch('setMessages');
+  },
 
 
   methods: {
