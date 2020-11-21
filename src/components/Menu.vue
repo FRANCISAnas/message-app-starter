@@ -13,7 +13,7 @@
     </router-link>
 
     <router-link to="/contacts">
-      <i class="fas fa-phone"></i>
+      <i  class="fas fa-phone"></i>
     </router-link>
     <i class="fas fa-ellipsis-h"></i>
 
